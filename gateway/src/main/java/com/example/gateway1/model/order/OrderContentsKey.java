@@ -1,0 +1,18 @@
+package com.example.gateway1.model.order;
+
+import lombok.Data;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import java.io.Serializable;
+
+@Data
+@Embeddable
+public class OrderContentsKey implements Serializable {
+
+    @Column(name = "order_id")
+    private Long orderId;
+
+    @Column(name = "part_id")
+    private Long partId;
+}
