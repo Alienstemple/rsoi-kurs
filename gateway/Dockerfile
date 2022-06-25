@@ -1,0 +1,15 @@
+FROM openjdk:11
+EXPOSE 8080
+ADD target/autoparts-app.jar autoparts-app.jar
+ENTRYPOINT ["java", "-jar","/autoparts-app.jar"]
+
+#FROM maven:3.6.3-jdk-11-slim AS build
+#COPY src /home/app/reservation/src
+#COPY pom.xml /home/app/reservation
+#RUN mvn -f /home/app/reservation/pom.xml clean package
+#
+## Package stage
+#FROM openjdk:16-alpine3.13
+#COPY --from=build /home/app/reservation/target/*.jar app.jar
+#EXPOSE 8080
+#ENTRYPOINT ["java","-jar","app.jar"]
