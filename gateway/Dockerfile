@@ -1,7 +1,7 @@
 FROM openjdk:11
 EXPOSE 8080
-ADD target/autoparts-app.jar autoparts-app.jar
-ENTRYPOINT ["java", "-jar","/autoparts-app.jar"]
+ADD target/gateway-app.jar gateway-app.jar
+ENTRYPOINT ["java", "-jar","/gateway-app.jar"]
 
 #FROM maven:3.6.3-jdk-11-slim AS build
 #COPY src /home/app/reservation/src

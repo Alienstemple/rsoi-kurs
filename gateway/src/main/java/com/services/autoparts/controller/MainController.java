@@ -29,6 +29,10 @@ public class MainController {
         return "parts-search";
     }
 
+    @RequestMapping("/exit")
+    public void testRestart() {
+        System.exit(0);
+    }
     @RequestMapping("/test-search")
     public String testSearch() {
         String test = "test";
